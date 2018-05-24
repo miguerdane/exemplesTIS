@@ -28,6 +28,14 @@ static int cpuLoad=0;
 double maxStepBySecond=0;
 static unsigned int verbose=0;
 
+
+int Pclock_gettime(long a, timespec* b)
+{
+  b->tv_sec=g_Time++;
+  return 0;
+}
+
+
 int64_t nSecTo(struct timespec start,struct timespec stop)
 {
     int64_t diff = 0;
