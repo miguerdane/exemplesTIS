@@ -33,6 +33,7 @@ double g_Time=0;
 int Pclock_gettime(long a, struct timespec* b)
 {
   b->tv_sec=g_Time++;
+  b->tv_nsec=0;
   return 0;
 }
 
