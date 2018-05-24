@@ -12,18 +12,13 @@
 
 /* ------------------------- FILE INCLUSION -------------------------------- */
 
-#include <customevents.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <pthread.h>
-#include <vm.h>
 
 #include "coreload.h"
+#include "stub.h"
 
-#ifdef POSIXDEBUG
-#include <sys/debug.h>
-#endif
 
 #define PERIOD_NSEC     100000000L // 100ms
 #define PERIODS_PER_SEC  10
