@@ -9,7 +9,7 @@
 #define CORELOAD_H_
 
 #include <stdint.h>
-#include <time.h>
+//#include <time.h>
 
 #define MAXSZ		128		/** Maximum message size. */
 #define MAXLINELEN	64		/** Maximum amount of data we're going to write. */
