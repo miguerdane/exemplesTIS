@@ -27,6 +27,7 @@
 static int cpuLoad=0;
 double maxStepBySecond=0;
 static unsigned int verbose=0;
+double g_Time=0;
 
 
 int Pclock_gettime(long a, struct timespec* b)
