@@ -1,8 +1,10 @@
 //#include "stub.h"
 int verbose = 0;
+int g_Time = 0;
 
-/*clock_gettime(long a, timespec* b)
+Pclock_gettime(long a, timespec* b)
 {
-  return;
+  b->tv_sec=g_Time++;
+  return 0;
 }
-*/
+
