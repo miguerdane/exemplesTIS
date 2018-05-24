@@ -20,6 +20,8 @@
 #define NSECS_TO_CALIBRATE 100000000L /** Duration in nsecs to calibrate */
 #define BUSY_ITERATIONS	1000 /** Number of for loop computation iterations */
 
+#define CLOCK_REALTIME 8
+
 extern int64_t nSecTo(struct timespec start,struct timespec stop);
 
 /**
