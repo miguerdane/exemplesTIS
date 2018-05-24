@@ -7,7 +7,7 @@
 int main(void)
 {
   int i;
-  int *array = malloc(5 * sizeof(int));
+  int *array = malloc(50 * sizeof(int));
 
  // if (array != NULL) {
     array[0] = 13;
