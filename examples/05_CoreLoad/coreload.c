@@ -16,8 +16,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include "coreload.h"
 #include "stub.h"
+#include "coreload.h"
 
 
 #define PERIOD_NSEC     100000000L // 100ms
