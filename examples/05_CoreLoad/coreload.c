@@ -98,10 +98,10 @@ void CoreLoad_main()
 	double j;
 	double totalDuration, stepBySecond;
 	struct timespec last,curr;
-	int stop = 1;
+	int stop = 0;
 
 	if (verbose) { printf("[Main Thread] Start CoreLoad infinite loop\n"); }
-	clock_gettime(CLOCK_REALTIME, &last);
+	stop = clock_gettime(CLOCK_REALTIME, &last);
 
 	while (!stop) {
 		step = 0;
