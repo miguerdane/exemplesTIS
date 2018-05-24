@@ -102,7 +102,7 @@ void CoreLoad_main()
 	int stop = 0;
 
 	if (verbose) { printf("[Main Thread] Start CoreLoad infinite loop\n"); }
-	//stop = clock_gettime(CLOCK_REALTIME, &last);
+	stop = Pclock_gettime(CLOCK_REALTIME, &last);
 
 	while (!stop) {
 		step = 0;
@@ -111,7 +111,7 @@ void CoreLoad_main()
 				j = (i + 3.0)/1.41;
 			}
 			step+=1.0;
-			clock_gettime(CLOCK_REALTIME, &curr);
+			Pclock_gettime(CLOCK_REALTIME, &curr);
 		} while(nSecTo(last, curr) < NSECS_PER_SEC);
 
 		/** kind of cpuload normalization with maximum already measured */
@@ -128,7 +128,7 @@ void CoreLoad_main()
 		}
 		/** Set last with current time to start new measure cycle */
 		usleep(1000);
-		clock_gettime(CLOCK_REALTIME, &curr);
+		Pclock_gettime(CLOCK_REALTIME, &curr);
 		last.tv_nsec = curr.tv_nsec;
 		last.tv_sec = curr.tv_sec;
 	}
