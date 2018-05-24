@@ -41,7 +41,7 @@ extern void CoreLoad_init(unsigned int isV);
  \param[in] maxStepBySecond global variable with max of loops computed
  \param[out] cpuLoad global variable with core busy percent
  */
-extern void CoreLoad_main(int stop);
+extern void CoreLoad_main();
 
 /**
  \brief Interface to read back computing core load
