@@ -91,13 +91,14 @@ void CoreLoad_init(unsigned int isV)
  \param[in] maxStepBySecond global variable with max of loops computed
  \param[out] cpuLoad global variable with core busy percent
  */
-void CoreLoad_main(int stop)
+void CoreLoad_main()
 {
 	int i;
 	double step;
-	volatile double j;
+	double j;
 	double totalDuration, stepBySecond;
 	struct timespec last,curr;
+	int stop = 1;
 
 	if (verbose) { printf("[Main Thread] Start CoreLoad infinite loop\n"); }
 	clock_gettime(CLOCK_REALTIME, &last);
@@ -140,4 +141,3 @@ int CoreLoad_get(void)
 {
 	return cpuLoad;
 }
-
