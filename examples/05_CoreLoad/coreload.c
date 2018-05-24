@@ -137,7 +137,7 @@ void CoreLoad_main()
 			printf(" %d %f %f\n", cpuLoad, stepBySecond, maxStepBySecond);
 		}
 		/** Set last with current time to start new measure cycle */
-		usleep(1000);
+		//usleep(1000);
 		Pclock_gettime(CLOCK_REALTIME, &curr);
 		last.tv_nsec = curr.tv_nsec;
 		last.tv_sec = curr.tv_sec;
