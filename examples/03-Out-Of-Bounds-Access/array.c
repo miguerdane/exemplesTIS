@@ -9,7 +9,7 @@ int main(void)
   int i;
   int *array = malloc(5 * sizeof(int));
 
-  if (array != NULL) {
+ // if (array != NULL) {
     array[0] = 13;
     array[1] = 7;
     array[2] = 42;
@@ -30,7 +30,7 @@ int main(void)
          the array. */
       printf("array[%d] = %d\n", i, array[i]);
     }
-  }
+  //}
 
   return 0;
 }
