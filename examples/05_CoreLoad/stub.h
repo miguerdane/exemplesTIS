@@ -4,4 +4,4 @@ double tv_nsec;
 double tv_sec;
 }timespec;
                   
-extern clock_gettime(long a, timespec* b);
+extern void clock_gettime(long a, timespec* b);
