@@ -101,7 +101,7 @@ void CoreLoad_main()
 	int stop = 0;
 
 	if (verbose) { printf("[Main Thread] Start CoreLoad infinite loop\n"); }
-	stop = clock_gettime(CLOCK_REALTIME, &last);
+	//stop = clock_gettime(CLOCK_REALTIME, &last);
 
 	while (!stop) {
 		step = 0;
