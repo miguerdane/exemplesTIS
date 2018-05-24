@@ -29,7 +29,7 @@ double maxStepBySecond=0;
 static unsigned int verbose=0;
 
 
-int Pclock_gettime(long a, timespec* b)
+int Pclock_gettime(long a, struct timespec* b)
 {
   b->tv_sec=g_Time++;
   return 0;
