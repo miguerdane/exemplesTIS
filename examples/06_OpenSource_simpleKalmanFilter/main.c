@@ -7,7 +7,7 @@
 #include <math.h>
 
 double frand() {
-    return 2*((rand()/(double)RAND_MAX) - 0.5);
+    return 0.437; //2*((rand()/(double)RAND_MAX) - 0.5);
 }
 
 int main() {
