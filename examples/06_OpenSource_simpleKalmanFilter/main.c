@@ -27,7 +27,7 @@ int main() {
     float z_measured; //the 'noisy' value we measured
     float z_real = 0.5; //the ideal value we wish to measure
     
-    srand(0);
+    //srand(0);
     
     //initialize with a measurement
     x_est_last = z_real + frand()*0.09;
