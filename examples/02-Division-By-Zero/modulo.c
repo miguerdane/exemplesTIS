@@ -10,7 +10,7 @@ int modulo(int a, int b)
 
 int main(void)
 {
-   //@ ensures /result < 500
+   /*@ ensures /result < 500; */
    
   int array[5] = {tis_interval(0,100), 7, 42, 10, 1};
   int i;
