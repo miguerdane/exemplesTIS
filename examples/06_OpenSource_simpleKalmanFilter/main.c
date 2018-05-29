@@ -7,10 +7,13 @@
 #include <math.h>
 
 double frand() {
-    return tis_interval(-1.0,1.0); //2*((rand()/(double)RAND_MAX) - 0.5);
+    return 0.437; //2*((rand()/(double)RAND_MAX) - 0.5);
 }
 
 int main() {
+ 
+ 
+    double retfrand=tis_interval(-1.0,1.0);
 
     //initial values for the kalman filter
     float x_est_last = 0;
@@ -30,7 +33,7 @@ int main() {
     //srand(0);
     
     //initialize with a measurement
-    x_est_last = z_real + frand()*0.09;
+    x_est_last = z_real + retfrand*0.09;
     
     float sum_error_kalman = 0;
     float sum_error_measure = 0;
@@ -42,7 +45,7 @@ int main() {
         //calculate the Kalman gain
         K = P_temp * (1.0/(P_temp + R));
         //measure
-        z_measured = z_real + frand()*0.09; //the real measurement plus noise
+        z_measured = z_real + retfrand*0.09; //the real measurement plus noise
         //correct
         x_est = x_temp_est + K * (z_measured - x_temp_est); 
         P = (1- K) * P_temp;
