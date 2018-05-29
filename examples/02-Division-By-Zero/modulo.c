@@ -22,7 +22,7 @@ int main(void)
 
        Calling the function 'modulo' by setting the parameter 'b' to 0
        will raise an alarm. */
-    n += modulo(array[i],100);
+    n += modulo(100,array[i]);
   }
 
   return n;
