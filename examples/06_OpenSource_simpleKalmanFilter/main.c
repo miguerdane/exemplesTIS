@@ -13,7 +13,7 @@ double frand() {
 int main() {
  
  
-    double retfrand=tis_interval(-1.0,1.0);
+    int retfrand=tis_interval(-1.0,1.0);
 
     //initial values for the kalman filter
     float x_est_last = 0;
